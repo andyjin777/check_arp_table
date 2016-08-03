@@ -1,7 +1,7 @@
 var arp = require('node-arp');
 var network = require('network');
 
-network.get_private_ip(function(err, ip) {
+network.get_gateway_ip(function(err, ip) {
 	arp.getMAC((err||ip), function(err, mac) {
 
 		var my_mac = mac;
